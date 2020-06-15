@@ -1,0 +1,519 @@
+﻿<!doctype html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]-->
+<html lang="en">
+
+<!--Lightbox (Modal Image Gallery)-->
+    <head>
+    
+        <!-- Basic -->
+        <title>SpaceX</title>
+         <link rel="shortcut icon" type="image/x-icon" href="asset/images/gallery2.ico" />   
+        <!-- Define Charset -->
+        <meta charset="utf-8">
+
+        <!-- Responsive Metatag -->
+        <meta name="viewport" content="width=device-width, initial-scale=1 , shrink-to-fit=no"> <!--, maximum-scale=1-->
+
+     
+        <!-- Bootstrap CSS   -->
+   
+        <link rel="stylesheet" href="asset/bootstrap/css/bootstrap.min.css" type="text/css">
+    </head>
+
+
+  
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="home.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">ABOUT SPACEX</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="falcon9.html">FALCON 9</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="falconheavy.html">FALCON HEAVY</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="gallery.html">GALLERY</a>
+                </li>
+          </ul>
+      
+          </div>
+            </nav>
+</header>
+
+<body >
+ 
+
+    <style>
+   
+      body {
+        background-color:	#202020;
+        height:100%;
+      }
+        .gallery {
+            margin: 1%;
+            border: 1px solid #ccc;
+            float: left;
+            width: 235px;
+            height:235px;
+            
+        }
+        
+        .gallery:hover {
+            border: 1px solid #777;
+        }
+        
+        div.gallery img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        html {
+    overflow: scroll;
+    overflow-x: hidden;
+    height:100%;
+  
+}
+.frame {
+  height:65%;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+        </style>
+<!--@-moz-document url-prefix() {
+    html,body{overflow: hidden !important;}
+}
+html {overflow-y: scroll;}-->
+      
+<!--1 -->
+
+<!--<div class="gallery col sm" style="background-image: url('asset/images/space3.jpg')" onclick="javascript:location.href='asset/images/space3.jpg'">
+    
+    
+  </div>-->
+<div class="row">
+  <div class="gallery " >
+      <a class="au" target=  href="asset/images/milky1.jpg" >
+        <img onclick="openModal();currentSlide(1)" src="asset/images/milky1.jpg" alt="Milky Way" width="100%" height="100%">
+      </a>
+     </div>
+  
+  <div class="gallery">
+    <a class="au" target=  href="asset/images/nebula4.jpg">
+      <img onclick="openModal();currentSlide(2)" src="asset/images/nebula4.jpg" alt="Foreawdawdst" width="100%" height="100%">
+    </a>
+   
+  </div>
+  
+  <div  class="gallery ">
+    <a class="au" target=  href="asset/images/nebula2.jpg">
+      <img onclick="openModal();currentSlide(3)"src="asset/images/nebula2.jpg" alt="Northeawdarn fafLights" width="80px" height="80px">
+    </a>
+   
+  </div>
+  
+
+      <div class="gallery">
+          <a class="au" target=  href="asset/images/falcon9.jpg">
+            <img onclick="openModal();currentSlide(4)"src="asset/images/falcon9.jpg" alt="Trollasdaw" width="80px" height="80px">
+          </a>
+          
+        </div>
+        
+        <div class="gallery ">
+          <a class="au" target=  href="asset/images/falcon91.jpg" >
+            <img onclick="openModal();currentSlide(5)"src="asset/images/falcon91.jpg" alt="Foreawdawdst" width="80px" height="80px">
+          </a>
+         
+        </div>
+        
+        <div class="gallery ">
+          <a class="au" target=  href="asset/images/falcon92.jpg">
+            <img onclick="openModal();currentSlide(6)"src="asset/images/falcon92.jpg" alt="Northeawdarn fafLights" width="80px" height="80px">
+          </a>
+         </div>
+      
+            <div class="gallery ">
+                <a class="au" target=  href="asset/images/gal1.jpg">
+                  <img onclick="openModal();currentSlide(7)"src="asset/images/gal1.jpg" alt="Trollasdaw" width="80px" height="80px">
+                </a>
+                
+              </div>
+              
+              <div class="gallery ">
+                <a class="au" target=  href="asset/images/gal2.jpg">
+                  <img onclick="openModal();currentSlide(8)"src="asset/images/gal2.jpg" alt="Foreawdawdst" width="80px" height="80px">
+                </a>
+               
+              </div>
+              
+              <div class="gallery ">
+                <a class="au" target=  href="asset/images/gal3.jpg">
+                  <img onclick="openModal();currentSlide(9)"src="asset/images/gal3.jpg" alt="Northeawdarn fafLights" width="80px" height="80px">
+                </a>
+               
+              </div>
+           
+            
+         
+                <div class="gallery ">
+                  <a class="au" target=  href="asset/images/gal5.jpg">
+                    <img onclick="openModal();currentSlide(10)"src="asset/images/gal5.jpg" alt="Trollasdaw" width="80px" height="80px">
+                  </a>
+                  
+                </div>
+             
+
+                <div class="gallery ">
+                  <a class="au" target=  href="asset/images/spacex34.jpg">
+                    <img onclick="openModal();currentSlide(11)"src="asset/images/spacex4.jpg" alt="Trollasdaw" width="80px" height="80px">
+                  </a>
+                  
+                </div>
+
+
+                <div  class="gallery ">
+                  <a class="au" target=  href="asset/images/andromeda.jpg">
+                    <img onclick="openModal();currentSlide(12)"src="asset/images/andromeda.jpg" alt="Trollasdaw" width="80px" height="80px">
+                  </a>
+                  
+                </div>
+
+                
+
+                  
+              <!--5-->
+             
+   
+                <div class="gallery ">
+                  <a class="au" target=  href="asset/images/gal4.jpg">
+                    <img onclick="openModal();currentSlide(13)"src="asset/images/gal4.jpg" alt="Mountains" width="80px" height="80px">
+                  </a>
+                
+                </div>
+
+                <div class="gallery ">
+                  <a class="au" target=  href="asset/images/spacex6.jpg">
+                    <img onclick="openModal();currentSlide(14)"src="asset/images/spacex6.jpg" alt="Mountains" width="80px" height="80px">
+                  </a>
+                
+                </div>
+
+                <div    class="gallery ">
+                  <a class="au" target=  href="asset/images/cool.jpg">
+                    <img onclick="openModal();currentSlide(15)"src="asset/images/cool.jpg" alt="cool" width="80px" height="80px">
+                  </a>
+                
+                </div>
+                 
+    </div>
+
+
+    
+   <!-- <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>-->
+      <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()" style="color:white">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+      
+
+        <img src="asset/images/milky1.jpg" style="width:100%;height:80vh;">
+      </div>
+  
+      <div class="mySlides">
+        
+        <img src="asset/images/nebula4.jpg" style="width:100%;height:80vh;">
+      </div>
+  
+      <div class="mySlides">
+   
+        <img src="asset/images/nebula2.jpg" style="width:100%;height:80vh;">
+      </div>
+  
+      <div class="mySlides">
+     
+        <img src="asset/images/falcon9.jpg" style="width:100%;height:80vh;">
+      </div>
+      <div class="mySlides">
+     
+          <img src="asset/images/falcon91.jpg" style="width:100%;height:80vh;">
+        </div>
+        <div class="mySlides">
+     
+            <img src="asset/images/falcon92.jpg" style="width:100%;height:80vh;">
+          </div>
+          <div class="mySlides">
+     
+              <img src="asset/images/gal1.jpg" style="width:100%;height:80vh;">
+            </div>
+
+            <div class="mySlides">
+     
+                <img src="asset/images/gal2.jpg" style="width:100%;height:80vh;">
+              </div>
+              <div class="mySlides">
+     
+                  <img src="asset/images/gal3.jpg" style="width:100%;height:80vh;">
+                </div>
+                <div class="mySlides">
+     
+                    <img src="asset/images/gal5.jpg" style="width:100%;height:80vh;">
+                  </div>
+                  <div class="mySlides">
+     
+                      <img src="asset/images/spacex4.jpg" style="width:100%;height:80vh;">
+                    </div>
+                    <div class="mySlides">
+     
+                        <img src="asset/images/andromeda.jpg" style="width:100%;height:80vh;">
+                      </div>
+                      <div class="mySlides">
+     
+                          <img src="asset/images/gal4.jpg" style="width:100%;height:80vh;">
+                        </div>
+                        <div class="mySlides">
+     
+                            <img src="asset/images/spacex6.jpg" style="width:100%;height:80vh;">
+                          </div>
+                          <div class="mySlides">
+     
+                              <img src="asset/images/cool.jpg" style="width:100%;height:80vh;">
+                            </div>
+      <!-- Next/previous controls -->
+     
+
+      <!-- Thumbnail image controls -->
+     
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!--<div > 
+        <p  style="margin-left:2em;"> <font size="5" face="alegreya" >&emsp;&emsp;&emsp;&emsp;
+  
+          </font></p>
+      </div>
+      
+    <div class="frame" style="text-align:center;">
+        
+        <iframe name="freim"  src="asset/images/milky.jpg" width="60%" height="100%" ></iframe>
+    
+    </div>
+    <div > 
+        <p  style="margin-left:2em;"> <font size="5" face="alegreya" >&emsp;&emsp;&emsp;&emsp;
+  
+          </font></p>
+      </div>-->
+
+
+<footer style="background-color:#262626;" class="py-4 navbar-dark bg-primary" >
+    <div >
+      <p class="m-0 text-center text-white">Copyright &copy; Baban Otto inc. 2018</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <script>
+      // Open the Modal
+      function openModal() {
+        document.getElementById('myModal').style.display = "block";
+      }
+      
+      // Close the Modal
+      function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+      }
+      
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+
+ <script src="asset/js/jquery-2.1.3.min.js"></script>
+  <script src="asset/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="asset/bootstrap/js/bootstrap.min.js"></script>
+  <script src="asset/js/owl.carousel.min.js"></script>
+  <script src="asset/js/jquery.appear.js"></script>
+  <script src="asset/js/jquery.fitvids.js"></script>
+  <script src="asset/js/jquery.nicescroll.min.js"></script>
+  <script src="asset/js/lightbox.min.js"></script>
+  <script src="asset/js/count-to.js"></script>
+  <script src="asset/js/styleswitcher.js"></script>
+  
+  <script src="asset/js/map.js"></script>
+
+  <script src="asset/js/script.js"></script>
+
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
